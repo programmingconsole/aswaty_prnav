@@ -6,10 +6,10 @@ import songAsset from "@/assets/music1.mp3.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mubashir & Shaha | Shahal & Fasna — Wedding Invitation" },
-      { name: "description", content: "Join us in celebrating the wedding of Dr. Mubashir Abdulla & Shaha Haris and Ayisha Fasna & Mohammed Shahal on 29th August 2026." },
-      { property: "og:title", content: "Mubashir & Shaha | Shahal & Fasna — Wedding Invitation" },
-      { property: "og:description", content: "Join us in celebrating the wedding of Dr. Mubashir Abdulla & Shaha Haris and Ayisha Fasna & Mohammed Shahal on 29th August 2026." },
+      { title: "Mohammed Shahal & Aysha Fasna — Wedding Invitation" },
+      { name: "description", content: "Join us in celebrating the wedding of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
+      { property: "og:title", content: "Mohammed Shahal & Aysha Fasna — Wedding Invitation" },
+      { property: "og:description", content: "Join us in celebrating the wedding of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -205,20 +205,8 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
 
       <div className="flex flex-col items-center animate-float-up delay-500 gap-1 sm:gap-2">
         <h1
-          className="text-maroon-deep"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.4rem, 9vw, 4rem)", lineHeight: 1.1 }}
-        >
-          Mubashir &amp; Shaha
-        </h1>
-        <p
-          className="my-0.5 text-gold-dark"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(1.5rem, 4.5vw, 2.2rem)", lineHeight: 1 }}
-        >
-          &amp;
-        </p>
-        <h1
-          className="text-maroon-deep"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.4rem, 9vw, 4rem)", lineHeight: 1.1 }}
+          className="text-maroon-deep text-center"
+          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.6rem, 10vw, 4.5rem)", lineHeight: 1.1 }}
         >
           Shahal &amp; Fasna
         </h1>
@@ -276,39 +264,20 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
               You are invited to the wedding of
             </p>
 
-            {/* Couple 1 */}
+            {/* Couple */}
             <div className="mt-4 flex flex-col items-center">
               <h2
                 className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-400 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)", lineHeight: 1.2 }}
-              >
-                DR. MUBASHIR ABDULLA
-              </h2>
-              <p className="my-0.5 italic text-gold-dark font-display text-[13px] leading-none animate-float-up delay-500">&amp;</p>
-              <h2
-                className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-500 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)", lineHeight: 1.2 }}
-              >
-                SHAHA HARIS
-              </h2>
-            </div>
-
-            <p className="my-2 italic text-gold-dark font-display text-[14px] animate-float-up delay-600">and</p>
-
-            {/* Couple 2 */}
-            <div className="flex flex-col items-center">
-              <h2
-                className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-700 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)", lineHeight: 1.2 }}
-              >
-                AYISHA FASNA
-              </h2>
-              <p className="my-0.5 italic text-gold-dark font-display text-[13px] leading-none animate-float-up delay-800">&amp;</p>
-              <h2
-                className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-800 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)", lineHeight: 1.2 }}
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
               >
                 MOHAMMED SHAHAL
+              </h2>
+              <p className="my-1.5 italic text-gold-dark font-display text-[15px] leading-none animate-float-up delay-500">and</p>
+              <h2
+                className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-600 break-words"
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
+              >
+                AYSHA FASNA
               </h2>
             </div>
 
@@ -349,12 +318,11 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
               <p className="text-[9px] font-semibold tracking-[0.15em] text-gold-dark sm:text-xs sm:tracking-[0.25em]">TIME</p>
               <span
                 className="text-maroon-deep font-bold leading-none my-1.5"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1rem, 4.5vw, 1.8rem)" }}
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.7rem)" }}
               >
-                3:00 - 9:00
+                11:30 AM
               </span>
-              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">PM</p>
-              <p className="text-[9px] font-semibold tracking-[0.12em] text-gold-dark sm:text-xs sm:tracking-[0.2em]">CELEBRATION</p>
+              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">NIKAH CEREMONY</p>
             </div>
           </div>
         </div>
@@ -394,7 +362,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
           </div>
 
           <div className="w-full flex-1 flex flex-col justify-center my-4">
-            <Countdown target="2026-08-29T15:00:00" />
+            <Countdown target="2026-08-29T11:30:00" />
           </div>
 
           <div>
