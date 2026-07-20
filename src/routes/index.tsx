@@ -11,7 +11,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Mohammed Shahal & Aysha Fasna — Nikah Invitation" },
       { property: "og:description", content: "Join us in celebrating the nikah of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/thumbnail.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/thumbnail.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
