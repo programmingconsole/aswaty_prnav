@@ -248,7 +248,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
     <div className="relative z-10 mx-auto w-full max-w-md sm:max-w-lg animate-card-rise px-3 py-6 sm:px-4 sm:py-8">
       {/* First page — main invitation details inside a bordered card */}
       <section className="relative flex flex-col items-center justify-center text-center w-full min-h-[85vh] py-4">
-        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/40 px-3 py-7 max-[360px]:px-2 max-[360px]:py-5 shadow-sm backdrop-blur-sm sm:px-6 sm:py-10 flex flex-col justify-between min-h-[500px]">
+        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/40 px-3 py-6 max-[360px]:px-2 max-[360px]:py-4 shadow-sm backdrop-blur-sm sm:px-6 sm:py-8 flex flex-col items-center justify-center gap-1">
           <CornerFlourish className="pointer-events-none absolute -left-1 -top-1 h-10 w-10 text-gold-dark sm:-left-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -right-1 -top-1 h-10 w-10 scale-x-[-1] text-gold-dark sm:-right-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -bottom-1 -left-1 h-10 w-10 scale-y-[-1] text-gold-dark sm:-bottom-2 sm:-left-2 sm:h-14 sm:w-14" />
@@ -260,19 +260,19 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
               In the name of Allah
             </p>
 
-            <p className="mt-3 italic text-maroon-deep/80 font-display text-[15px] animate-float-up delay-300 sm:text-base">
+            <p className="mt-2 italic text-maroon-deep/80 font-display text-[15px] animate-float-up delay-300 sm:text-base">
               You are invited to the nikah of
             </p>
 
             {/* Couple */}
-            <div className="mt-4 flex flex-col items-center">
+            <div className="mt-3 flex flex-col items-center">
               <h2
                 className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-400 break-words"
                 style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
               >
                 MOHAMMED SHAHAL
               </h2>
-              <p className="my-1.5 italic text-gold-dark font-display text-[15px] leading-none animate-float-up delay-500">and</p>
+              <p className="my-1 italic text-gold-dark font-display text-[15px] leading-none animate-float-up delay-500">and</p>
               <h2
                 className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-600 break-words"
                 style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
@@ -281,7 +281,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
               </h2>
             </div>
 
-            <div className="my-4 mx-auto flex w-full max-w-[160px] items-center justify-center gap-2 animate-float-up delay-950">
+            <div className="my-2.5 mx-auto flex w-full max-w-[160px] items-center justify-center gap-2 animate-float-up delay-950">
               <span className="h-[1px] flex-1 bg-maroon-deep/30" />
               <span className="h-1.5 w-1.5 rotate-45 border border-maroon-deep/40" />
               <span className="h-[1px] flex-1 bg-maroon-deep/30" />
@@ -289,7 +289,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
           </div>
 
           {/* Date block — two arched cards with icon, date, and time */}
-          <div className="relative mx-auto mt-2 grid w-full max-w-[290px] grid-cols-2 items-stretch gap-2 animate-float-up delay-1000 sm:max-w-[360px] sm:gap-4">
+          <div className="relative mx-auto mt-1 grid w-full max-w-[290px] grid-cols-2 items-stretch gap-2 animate-float-up delay-1000 sm:max-w-[360px] sm:gap-4">
             {/* Date card */}
             <div className="flex min-w-0 flex-col items-center rounded-t-[1.25rem] border border-gold-dark/50 bg-cream/60 px-1.5 py-2.5 max-[360px]:px-1 max-[360px]:py-2 sm:rounded-t-[2rem] sm:px-4 sm:py-5">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mb-1 shrink-0 text-maroon-deep sm:mb-2 sm:h-7 sm:w-7">
