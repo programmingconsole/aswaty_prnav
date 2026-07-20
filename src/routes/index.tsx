@@ -6,10 +6,10 @@ import songAsset from "@/assets/music1.mp3.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mohammed Shahal & Aysha Fasna — Wedding Invitation" },
-      { name: "description", content: "Join us in celebrating the wedding of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
-      { property: "og:title", content: "Mohammed Shahal & Aysha Fasna — Wedding Invitation" },
-      { property: "og:description", content: "Join us in celebrating the wedding of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
+      { title: "Mohammed Shahal & Aysha Fasna — Nikah Invitation" },
+      { name: "description", content: "Join us in celebrating the nikah of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
+      { property: "og:title", content: "Mohammed Shahal & Aysha Fasna — Nikah Invitation" },
+      { property: "og:description", content: "Join us in celebrating the nikah of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -198,7 +198,7 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
       <CornerFlourish className="pointer-events-none absolute bottom-1 right-1 h-12 w-12 scale-x-[-1] scale-y-[-1] text-gold-dark sm:bottom-2 sm:right-2 sm:h-20 sm:w-20 md:h-24 md:w-24" />
 
       <p className="tracking-[0.28em] text-[10px] text-gold-dark animate-float-up sm:tracking-[0.5em] sm:text-xs">BISMILLAH</p>
-      <p className="mt-4 tracking-[0.24em] text-xs text-maroon-deep animate-float-up delay-200 sm:tracking-[0.45em] sm:text-sm">THE WEDDING OF</p>
+      <p className="mt-4 tracking-[0.24em] text-xs text-maroon-deep animate-float-up delay-200 sm:tracking-[0.45em] sm:text-sm">THE NIKAH OF</p>
 
 
       <Ornament className="my-6 animate-float-up delay-300 sm:my-8" />
@@ -261,7 +261,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
             </p>
 
             <p className="mt-3 italic text-maroon-deep/80 font-display text-[15px] animate-float-up delay-300 sm:text-base">
-              You are invited to the wedding of
+              You are invited to the nikah of
             </p>
 
             {/* Couple */}
