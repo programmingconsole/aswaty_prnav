@@ -90,3 +90,52 @@ The invitation includes auto-playing ambient background music. To update the aud
 - **Background Wallpaper**: Replace the image located at [`src/assets/nikah-bg.jpg`](file:///d:/DOWNLOADS/nikahsf/src/assets/nikah-bg.jpg).
 - **Link Sharing Preview Thumbnail**: Replace the file at [`public/thumbnail.jpg`](file:///d:/DOWNLOADS/nikahsf/public/thumbnail.jpg). This image is shown as the preview thumbnail when sending the website link over messaging apps like WhatsApp or iMessage.
 
+### 4. How to Add Multiple Couples
+
+If the event hosts multiple weddings/nikahs together, you can customize [`src/routes/index.tsx`](file:///d:/DOWNLOADS/nikahsf/src/routes/index.tsx) to list multiple couples:
+
+#### A. Under the Cover Section:
+Replace the single couple header with a list of couples separated by an ampersand:
+```tsx
+<div className="flex flex-col items-center animate-float-up delay-500 gap-1 sm:gap-2">
+  <h1 className="text-maroon-deep" style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.4rem, 9vw, 4rem)", lineHeight: 1.1 }}>
+    Couple One Names
+  </h1>
+  <p className="my-0.5 text-gold-dark" style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(1.5rem, 4.5vw, 2.2rem)", lineHeight: 1 }}>
+    &amp;
+  </p>
+  <h1 className="text-maroon-deep" style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.4rem, 9vw, 4rem)", lineHeight: 1.1 }}>
+    Couple Two Names
+  </h1>
+</div>
+```
+
+#### B. Under the Invitation Card (CardContent Section):
+Modify the couple element inside the card to stack multiple couples:
+```tsx
+{/* Couple 1 */}
+<div className="mt-4 flex flex-col items-center">
+  <h2 className="..." style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)" }}>
+    GROOM ONE NAME
+  </h2>
+  <p className="my-0.5 italic text-gold-dark font-display text-[13px]">&amp;</p>
+  <h2 className="..." style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)" }}>
+    BRIDE ONE NAME
+  </h2>
+</div>
+
+<p className="my-2 italic text-gold-dark font-display text-[14px]">and</p>
+
+{/* Couple 2 */}
+<div className="flex flex-col items-center">
+  <h2 className="..." style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)" }}>
+    GROOM TWO NAME
+  </h2>
+  <p className="my-0.5 italic text-gold-dark font-display text-[13px]">&amp;</p>
+  <h2 className="..." style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.4rem)" }}>
+    BRIDE TWO NAME
+  </h2>
+</div>
+```
+
+
