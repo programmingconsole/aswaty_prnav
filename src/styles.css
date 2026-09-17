@@ -116,3 +116,34 @@
 .delay-700 { animation-delay: 0.7s; }
 .delay-1000 { animation-delay: 1s; }
 .delay-1500 { animation-delay: 1.5s; }
+
+/* Sea Waves Animation */
+@keyframes wave-flow-1 {
+  0% { transform: translateX(0) translateZ(0) scaleY(1); }
+  50% { transform: translateX(-25%) translateZ(0) scaleY(1.2); }
+  100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+@keyframes wave-flow-2 {
+  0% { transform: translateX(-50%) translateZ(0) scaleY(1.1); }
+  50% { transform: translateX(-25%) translateZ(0) scaleY(0.85); }
+  100% { transform: translateX(0) translateZ(0) scaleY(1.1); }
+}
+
+@keyframes wave-gold-shimmer {
+  0%, 100% { opacity: 0.35; transform: translateY(0px); }
+  50% { opacity: 0.85; transform: translateY(-3px); }
+}
+
+.animate-wave-1 {
+  animation: wave-flow-1 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.animate-wave-2 {
+  animation: wave-flow-2 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.animate-wave-3 {
+  animation: wave-flow-1 7s ease-in-out infinite alternate;
+}
+

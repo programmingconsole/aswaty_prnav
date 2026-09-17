@@ -6,19 +6,19 @@ import songAsset from "@/assets/music1.mp3.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mohammed Shahal & Aysha Fasna — Nikah Invitation" },
-      { name: "description", content: "Join us in celebrating the nikah of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
-      { property: "og:title", content: "Mohammed Shahal & Aysha Fasna — Nikah Invitation" },
-      { property: "og:description", content: "Join us in celebrating the nikah of Mohammed Shahal & Aysha Fasna on 29th August 2026." },
+      { title: "Aswathi & Pranav — Wedding Invitation" },
+      { name: "description", content: "MR. PRADEEP KUMAR & MRS. SHYJA PRADEEP cordially invite you to celebrate the wedding of Aswathi & Pranav on 15th November 2026 at Adathara Auditorium, Wayanad." },
+      { property: "og:title", content: "Aswathi & Pranav — Wedding Invitation" },
+      { property: "og:description", content: "Join us in celebrating the wedding of Aswathi & Pranav on 15th November 2026 at Adathara Auditorium, Wayanad." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/thumbnail.jpg" },
+      { property: "og:image", content: "/beach_wedding_bg.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/thumbnail.jpg" },
+      { name: "twitter:image", content: "/beach_wedding_bg.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Amiri:wght@400;700&family=Great+Vibes&family=Cinzel:wght@400;500;600&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Cinzel:wght@400;500;600;700&display=swap" },
     ],
   }),
   component: Invitation,
@@ -45,14 +45,13 @@ function Invitation() {
     else { a.pause(); setPlaying(false); }
   };
 
-  // Fallback to local /music1.mp3 when running locally where the Lovable proxy is not available
   const audioSrc = songAsset.url.startsWith("/__l5e") ? "/music1.mp3" : songAsset.url;
 
   return (
     <div className="min-h-screen w-full bg-[#f3eae1] flex justify-center items-stretch overflow-x-hidden font-serif-body">
       <audio ref={audioRef} src={audioSrc} preload="auto" />
 
-      {/* Fixed/Adjustable Background aligned to the centered column */}
+      {/* Fixed Background aligned to the centered column */}
       <div className="fixed inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-md sm:max-w-lg pointer-events-none z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -62,7 +61,6 @@ function Invitation() {
       </div>
 
       <div className="relative w-full max-w-md sm:max-w-lg min-h-screen text-maroon-deep shadow-2xl flex flex-col z-10">
-
         {/* Content wrapper */}
         <div className="relative z-10 flex-1 flex flex-col">
           {!opened ? (
@@ -76,7 +74,7 @@ function Invitation() {
         </div>
       </div>
 
-      {/* Floating music toggle (bottom-right, maroon circle with gold icon) */}
+      {/* Floating music toggle */}
       <button
         onClick={opened ? toggleMusic : () => setOpened(true)}
         aria-label={playing ? "Pause music" : "Play music"}
@@ -98,7 +96,6 @@ function Invitation() {
     </div>
   );
 }
-
 
 function Petals() {
   const petals = Array.from({ length: 14 });
@@ -149,44 +146,71 @@ function CornerFlourish({ className = "" }: { className?: string }) {
 
 function FlowerDivider() {
   return (
-    <div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-xl items-center justify-center px-4 py-1 sm:py-4">
-      <span className="h-px min-w-0 flex-1 bg-gradient-to-r from-transparent to-gold-dark/50" />
-      <svg
-        width="70"
-        height="30"
-        viewBox="0 0 120 48"
-        fill="none"
-        className="mx-2 shrink-0 text-maroon-deep/80 sm:mx-5 sm:h-10 sm:w-28"
-      >
-        <path
-          d="M60 44 C 52 34, 44 30, 60 20 C 76 30, 68 34, 60 44 Z"
-          fill="currentColor"
-          opacity="0.5"
-        />
-        <path
-          d="M60 20 C 55 8, 45 4, 60 2 C 75 4, 65 8, 60 20 Z"
-          fill="currentColor"
-          opacity="0.6"
-        />
-        <circle cx="60" cy="24" r="4" fill="currentColor" opacity="0.7" />
-        <path
-          d="M60 24 C 48 16, 36 14, 32 22 C 30 26, 38 30, 48 28"
-          stroke="currentColor"
-          strokeWidth="1"
+    <div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-xl flex-col items-center justify-center px-4 py-2 sm:py-4">
+      {/* Animated Ocean Wave Transition */}
+      <div className="relative w-full h-8 overflow-hidden my-1 opacity-70">
+        <svg
+          className="absolute bottom-0 left-0 w-[200%] h-7 animate-wave-1 opacity-40 text-[#2b6cb0]"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,20 C150,80 350,-20 500,40 C650,90 900,10 1200,45 L1200,120 L0,120 Z"
+            fill="currentColor"
+          />
+        </svg>
+
+        <svg
+          className="absolute bottom-0 left-0 w-[200%] h-6 animate-wave-2 opacity-60 text-[#b08850]"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,40 C200,70 450,10 700,50 C900,90 1050,15 1200,35 L1200,120 L0,120 Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+
+      <div className="flex w-full items-center justify-center">
+        <span className="h-px min-w-0 flex-1 bg-gradient-to-r from-transparent to-gold-dark/50" />
+        <svg
+          width="70"
+          height="30"
+          viewBox="0 0 120 48"
           fill="none"
-          opacity="0.5"
-        />
-        <path
-          d="M60 24 C 72 16, 84 14, 88 22 C 90 26, 82 30, 72 28"
-          stroke="currentColor"
-          strokeWidth="1"
-          fill="none"
-          opacity="0.5"
-        />
-        <circle cx="32" cy="22" r="3" fill="currentColor" opacity="0.5" />
-        <circle cx="88" cy="22" r="3" fill="currentColor" opacity="0.5" />
-      </svg>
-      <span className="h-px min-w-0 flex-1 bg-gradient-to-l from-transparent to-gold-dark/50" />
+          className="mx-2 shrink-0 text-maroon-deep/80 sm:mx-5 sm:h-10 sm:w-28"
+        >
+          <path
+            d="M60 44 C 52 34, 44 30, 60 20 C 76 30, 68 34, 60 44 Z"
+            fill="currentColor"
+            opacity="0.5"
+          />
+          <path
+            d="M60 20 C 55 8, 45 4, 60 2 C 75 4, 65 8, 60 20 Z"
+            fill="currentColor"
+            opacity="0.6"
+          />
+          <circle cx="60" cy="24" r="4" fill="currentColor" opacity="0.7" />
+          <path
+            d="M60 24 C 48 16, 36 14, 32 22 C 30 26, 38 30, 48 28"
+            stroke="currentColor"
+            strokeWidth="1"
+            fill="none"
+            opacity="0.5"
+          />
+          <path
+            d="M60 24 C 72 16, 84 14, 88 22 C 90 26, 82 30, 72 28"
+            stroke="currentColor"
+            strokeWidth="1"
+            fill="none"
+            opacity="0.5"
+          />
+          <circle cx="32" cy="22" r="3" fill="currentColor" opacity="0.5" />
+          <circle cx="88" cy="22" r="3" fill="currentColor" opacity="0.5" />
+        </svg>
+        <span className="h-px min-w-0 flex-1 bg-gradient-to-l from-transparent to-gold-dark/50" />
+      </div>
     </div>
   );
 }
@@ -199,25 +223,31 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
       <CornerFlourish className="pointer-events-none absolute bottom-1 left-1 h-12 w-12 scale-y-[-1] text-gold-dark sm:bottom-2 sm:left-2 sm:h-20 sm:w-20 md:h-24 md:w-24" />
       <CornerFlourish className="pointer-events-none absolute bottom-1 right-1 h-12 w-12 scale-x-[-1] scale-y-[-1] text-gold-dark sm:bottom-2 sm:right-2 sm:h-20 sm:w-20 md:h-24 md:w-24" />
 
-      <p className="tracking-[0.28em] text-[10px] text-gold-dark animate-float-up sm:tracking-[0.5em] sm:text-xs">BISMILLAH</p>
-      <p className="mt-4 tracking-[0.24em] text-xs text-maroon-deep animate-float-up delay-200 sm:tracking-[0.45em] sm:text-sm">THE NIKAH OF</p>
-
+      <p className="tracking-[0.2em] text-[10px] font-semibold text-maroon-deep uppercase animate-float-up sm:tracking-[0.35em] sm:text-xs">
+        MR. PRADEEP KUMAR &amp; MRS. SHYJA PRADEEP
+      </p>
+      <p className="mt-3 tracking-[0.22em] text-xs text-maroon-deep animate-float-up delay-200 sm:tracking-[0.4em] sm:text-sm">
+        THE WEDDING OF
+      </p>
 
       <Ornament className="my-6 animate-float-up delay-300 sm:my-8" />
 
       <div className="flex flex-col items-center animate-float-up delay-500 gap-1 sm:gap-2">
         <h1
-          className="text-maroon-deep text-center"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.6rem, 10vw, 4.5rem)", lineHeight: 1.1 }}
+          className="text-maroon-deep text-center font-bold"
+          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.8rem, 10vw, 4.8rem)", lineHeight: 1.1 }}
         >
-          Shahal &amp; Fasna
+          Aswathi &amp; Pranav
         </h1>
+        <p className="mt-2 text-[10px] tracking-[0.18em] uppercase text-gold-dark font-medium sm:text-xs">
+          D/O MR. CHANDRAN &amp; MRS. REKHA
+        </p>
       </div>
 
       <Ornament className="my-6 animate-float-up delay-1000 sm:my-8" />
 
-      <p className="tracking-[0.28em] text-sm text-maroon-deep/80 animate-float-up delay-1000 sm:tracking-[0.4em]">
-        29 &middot; 08 &middot; 2026
+      <p className="tracking-[0.28em] text-sm text-maroon-deep/90 font-semibold animate-float-up delay-1000 sm:tracking-[0.4em]">
+        15 &middot; 11 &middot; 2026
       </p>
 
       {showButton && (
@@ -246,85 +276,90 @@ function Ornament({ className = "" }: { className?: string }) {
 }
 
 function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: boolean; onToggle: () => void }) {
+  const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Adathara+Auditorium+Wayanad+Kerala";
+
   return (
     <div className="relative z-10 mx-auto w-full max-w-md sm:max-w-lg animate-card-rise px-3 py-6 sm:px-4 sm:py-8">
       {/* First page — main invitation details inside a bordered card */}
       <section className="relative flex flex-col items-center justify-center text-center w-full min-h-[85vh] py-4">
-        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/40 px-3 py-6 max-[360px]:px-2 max-[360px]:py-4 shadow-sm backdrop-blur-sm sm:px-6 sm:py-8 flex flex-col items-center justify-center gap-1">
+        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/50 px-3 py-6 max-[360px]:px-2 max-[360px]:py-4 shadow-sm backdrop-blur-sm sm:px-6 sm:py-8 flex flex-col items-center justify-center gap-1">
           <CornerFlourish className="pointer-events-none absolute -left-1 -top-1 h-10 w-10 text-gold-dark sm:-left-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -right-1 -top-1 h-10 w-10 scale-x-[-1] text-gold-dark sm:-right-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -bottom-1 -left-1 h-10 w-10 scale-y-[-1] text-gold-dark sm:-bottom-2 sm:-left-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -bottom-1 -right-1 h-10 w-10 scale-x-[-1] scale-y-[-1] text-gold-dark sm:-bottom-2 sm:-right-2 sm:h-14 sm:w-14" />
 
           <div>
-            <p className="font-arabic text-lg text-maroon-deep animate-float-up sm:text-2xl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-            <p className="mt-1 text-[9px] uppercase tracking-[0.24em] text-gold-dark animate-float-up delay-200 sm:text-[10px] sm:tracking-[0.4em]">
-              In the name of Allah
+            <p className="tracking-[0.16em] text-[10px] uppercase font-bold text-maroon-deep animate-float-up sm:text-[11px] max-w-[90%] mx-auto leading-relaxed">
+              MR. PRADEEP KUMAR &amp; MRS. SHYJA PRADEEP
             </p>
 
-            <p className="mt-2 italic text-maroon-deep/80 font-display text-[15px] animate-float-up delay-300 sm:text-base">
-              You are invited to the nikah of
+            <p className="mt-2 italic text-maroon-deep/90 font-display text-[15px] animate-float-up delay-300 sm:text-base leading-snug">
+              Cordially invite you to celebrate<br />the wedding of our beloved son
             </p>
 
             {/* Couple */}
-            <div className="mt-3 flex flex-col items-center">
+            <div className="mt-4 flex flex-col items-center">
               <h2
                 className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-400 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.4rem, 6vw, 1.95rem)", lineHeight: 1.2 }}
               >
-                MOHAMMED SHAHAL
+                ASWATHI
               </h2>
-              <p className="my-1 italic text-gold-dark font-display text-[15px] leading-none animate-float-up delay-500">and</p>
+              <p className="my-1 italic text-gold-dark font-display text-[18px] leading-none animate-float-up delay-500 font-bold">&amp;</p>
               <h2
                 className="tracking-[0.06em] font-bold text-maroon-deep animate-float-up delay-600 break-words"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.15rem, 5vw, 1.55rem)", lineHeight: 1.2 }}
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.4rem, 6vw, 1.95rem)", lineHeight: 1.2 }}
               >
-                AYSHA FASNA
+                PRANAV
               </h2>
             </div>
 
-            <div className="my-2.5 mx-auto flex w-full max-w-[160px] items-center justify-center gap-2 animate-float-up delay-950">
+            <p className="mt-3 text-[10px] tracking-[0.18em] uppercase text-gold-dark font-semibold animate-float-up delay-700 sm:text-xs">
+              D/O MR. CHANDRAN &amp; MRS. REKHA
+            </p>
+
+            <div className="my-3 mx-auto flex w-full max-w-[160px] items-center justify-center gap-2 animate-float-up delay-950">
               <span className="h-[1px] flex-1 bg-maroon-deep/30" />
               <span className="h-1.5 w-1.5 rotate-45 border border-maroon-deep/40" />
               <span className="h-[1px] flex-1 bg-maroon-deep/30" />
             </div>
           </div>
 
-          {/* Date block — two arched cards with icon, date, and time */}
+          {/* Date & Time block — two arched cards */}
           <div className="relative mx-auto mt-1 grid w-full max-w-[290px] grid-cols-2 items-stretch gap-2 animate-float-up delay-1000 sm:max-w-[360px] sm:gap-4">
             {/* Date card */}
-            <div className="flex min-w-0 flex-col items-center rounded-t-[1.25rem] border border-gold-dark/50 bg-cream/60 px-1.5 py-2.5 max-[360px]:px-1 max-[360px]:py-2 sm:rounded-t-[2rem] sm:px-4 sm:py-5">
+            <div className="flex min-w-0 flex-col items-center rounded-t-[1.25rem] border border-gold-dark/50 bg-cream/70 px-1.5 py-2.5 max-[360px]:px-1 max-[360px]:py-2 sm:rounded-t-[2rem] sm:px-4 sm:py-5 shadow-xs">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mb-1 shrink-0 text-maroon-deep sm:mb-2 sm:h-7 sm:w-7">
                 <rect x="3" y="4" width="18" height="18" rx="2" />
                 <line x1="16" y1="2" x2="16" y2="6" />
                 <line x1="8" y1="2" x2="8" y2="6" />
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
-              <p className="text-[9px] font-semibold tracking-[0.15em] text-gold-dark sm:text-xs sm:tracking-[0.25em]">AUGUST</p>
+              <p className="text-[9px] font-semibold tracking-[0.15em] text-gold-dark sm:text-xs sm:tracking-[0.25em]">NOVEMBER</p>
               <span
                 className="text-maroon-deep font-bold leading-none my-1"
                 style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(2rem, 10vw, 4rem)" }}
               >
-                29
+                15
               </span>
-              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">SATURDAY</p>
+              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">SUNDAY</p>
               <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">2026</p>
             </div>
 
             {/* Time card */}
-            <div className="flex min-w-0 flex-col items-center rounded-t-[1.25rem] border border-gold-dark/50 bg-cream/60 px-1.5 py-2.5 max-[360px]:px-1 max-[360px]:py-2 sm:rounded-t-[2rem] sm:px-4 sm:py-5">
+            <div className="flex min-w-0 flex-col items-center rounded-t-[1.25rem] border border-gold-dark/50 bg-cream/70 px-1.5 py-2.5 max-[360px]:px-1 max-[360px]:py-2 sm:rounded-t-[2rem] sm:px-4 sm:py-5 shadow-xs">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mb-1 shrink-0 text-maroon-deep sm:mb-2 sm:h-7 sm:w-7">
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12,6 12,12 16,14" />
               </svg>
-              <p className="text-[9px] font-semibold tracking-[0.15em] text-gold-dark sm:text-xs sm:tracking-[0.25em]">TIME</p>
+              <p className="text-[9px] font-semibold tracking-[0.15em] text-gold-dark sm:text-xs sm:tracking-[0.25em]">MUHURTHAM</p>
               <span
-                className="text-maroon-deep font-bold leading-none my-1.5"
-                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.05rem, 4.5vw, 1.7rem)" }}
+                className="text-maroon-deep font-bold leading-none my-1.5 text-center"
+                style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(0.85rem, 3.8vw, 1.25rem)" }}
               >
-                11:30 AM
+                10:00 AM – 10:40 AM
               </span>
-              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">NIKAH CEREMONY</p>
+              <p className="text-[9px] font-semibold tracking-[0.12em] text-maroon-deep sm:text-xs sm:tracking-[0.2em]">WEDDING CEREMONY</p>
             </div>
           </div>
         </div>
@@ -333,45 +368,113 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
       {/* Flower border divider */}
       <FlowerDivider />
 
-      {/* Second page — countdown & location */}
+      {/* Second page — Venue, Location QR, Artwork, Countdown & With Love */}
       <section className="relative flex flex-col items-center justify-center text-center w-full min-h-[85vh] py-4">
-        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/40 px-3 py-7 max-[360px]:px-2 max-[360px]:py-5 shadow-sm backdrop-blur-sm sm:px-6 sm:py-10 flex flex-col justify-between min-h-[500px]">
+        <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/50 px-3 py-6 max-[360px]:px-2 max-[360px]:py-5 shadow-sm backdrop-blur-sm sm:px-6 sm:py-8 flex flex-col justify-between gap-6">
           <CornerFlourish className="pointer-events-none absolute -left-1 -top-1 h-10 w-10 text-gold-dark sm:-left-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -right-1 -top-1 h-10 w-10 scale-x-[-1] text-gold-dark sm:-right-2 sm:-top-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -bottom-1 -left-1 h-10 w-10 scale-y-[-1] text-gold-dark sm:-bottom-2 sm:-left-2 sm:h-14 sm:w-14" />
           <CornerFlourish className="pointer-events-none absolute -bottom-1 -right-1 h-10 w-10 scale-x-[-1] scale-y-[-1] text-gold-dark sm:-bottom-2 sm:-right-2 sm:h-14 sm:w-14" />
 
-          <div className="my-4 flex flex-col items-center gap-2 animate-float-up delay-1000">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold-dark sm:w-6 sm:h-6">
+          {/* Venue & Location Header */}
+          <div className="flex flex-col items-center gap-1.5 animate-float-up delay-200">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold-dark sm:w-7 sm:h-7">
               <path d="M12 2 C 8 2, 5 5, 5 9 c 0 5, 7 13, 7 13 s 7 -8, 7 -13 c 0 -4, -3 -7, -7 -7 z" />
               <circle cx="12" cy="9" r="2.5" />
             </svg>
-            <p className="max-w-full break-words font-display text-base sm:text-lg leading-snug text-maroon-deep font-semibold">Eventza Convention Centre</p>
-            <p className="max-w-full break-words text-[10px] tracking-[0.15em] text-maroon-deep/80 sm:text-xs sm:tracking-widest">M-DIT Road, Ullyeri</p>
-            
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Eventza+Convention+Centre+Ulliyeri"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 rounded-full border border-maroon-deep/30 bg-maroon-deep/5 px-4 py-2 text-[10px] uppercase tracking-wider text-maroon-deep transition-all hover:bg-maroon-deep hover:text-cream"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
-                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              View on Google Maps
-            </a>
-          </div>
+            <p className="text-xs italic text-maroon-deep/80 font-serif">at</p>
+            <p className="max-w-full break-words font-display text-lg sm:text-xl leading-snug text-maroon-deep font-bold tracking-wide uppercase">
+              ADATHARA AUDITORIUM
+            </p>
+            <p className="max-w-full break-words text-[10px] tracking-[0.18em] text-maroon-deep/90 font-semibold sm:text-xs uppercase">
+              WAYANAD, KERALA
+            </p>
 
-          <div className="w-full flex-1 flex flex-col justify-center my-4">
-            <Countdown target="2026-08-29T11:30:00" />
-          </div>
-
-          <div>
-            <div className="font-arabic text-lg text-maroon-deep animate-float-up delay-1500 sm:text-xl">
-              بَارَكَ اللَّهُ لَكُمَا
+            {/* QR Code Scan & Direct Google Maps link */}
+            <div className="mt-3 flex flex-col items-center">
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/90 border border-gold-dark/40 rounded-md shadow-xs transition-transform hover:scale-105"
+              >
+                <QRCodeSVG url={mapsUrl} size={90} />
+              </a>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-maroon-deep/30 bg-maroon-deep/5 px-4 py-2 text-[10px] uppercase tracking-wider text-maroon-deep transition-all hover:bg-maroon-deep hover:text-cream"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                SCAN FOR LOCATION
+              </a>
             </div>
-            <p className="mt-0.5 text-[9px] uppercase tracking-[0.2em] text-gold-dark sm:text-[10px] sm:tracking-[0.35em]">May Allah bless you both</p>
+          </div>
+
+          {/* Beach Couple Illustration Image with Animated Sea Waves Overlay */}
+          <div className="relative w-full overflow-hidden rounded-lg border border-gold-dark/40 shadow-xs my-2 group">
+            <img
+              src="/beach_wedding_bg.png"
+              alt="Aswathi & Pranav Wedding Illustration"
+              className="w-full h-auto object-cover max-h-[270px] transition-transform duration-700 hover:scale-105"
+            />
+            
+            {/* Live Animated Sea Waves overlaying the shoreline */}
+            <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none overflow-hidden opacity-90">
+              <svg
+                className="absolute bottom-0 left-0 w-[200%] h-12 animate-wave-1 opacity-40 text-[#2b6cb0]"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,40 C150,90 350,-10 500,45 C650,100 900,20 1200,50 L1200,120 L0,120 Z"
+                  fill="currentColor"
+                />
+              </svg>
+
+              <svg
+                className="absolute bottom-0 left-0 w-[200%] h-10 animate-wave-2 opacity-55 text-[#319795]"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,20 C200,70 450,5 700,55 C900,95 1050,15 1200,35 L1200,120 L0,120 Z"
+                  fill="currentColor"
+                />
+              </svg>
+
+              {/* White Sparkling Sea Foam Wave */}
+              <svg
+                className="absolute bottom-0 left-0 w-[200%] h-7 animate-wave-3 opacity-80 text-white/90"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,60 C180,30 380,85 600,40 C820,95 1020,45 1200,65 L1200,120 L0,120 Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Countdown Timer */}
+          <div className="w-full my-2">
+            <Countdown target="2026-11-15T10:00:00" />
+          </div>
+
+          {/* With Love Footer */}
+          <div className="flex flex-col items-end text-right border-t border-gold-dark/30 pt-3">
+            <div className="font-display italic text-lg text-gold-dark font-semibold" style={{ fontFamily: "'Great Vibes', cursive" }}>
+              With love
+            </div>
+            <p className="mt-0.5 text-xs text-maroon-deep font-semibold leading-relaxed">
+              Pradeep, Shyja,<br />
+              Chippy, Anand
+            </p>
           </div>
         </div>
       </section>
@@ -379,6 +482,55 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
   );
 }
 
+function QRCodeSVG({ url: _url, size = 90 }: { url: string; size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="29" height="29" fill="white" />
+      {/* Outer Position Detection Patterns */}
+      <rect x="2" y="2" width="7" height="7" fill="#5a141e" />
+      <rect x="3" y="3" width="5" height="5" fill="white" />
+      <rect x="4" y="4" width="3" height="3" fill="#5a141e" />
+      
+      <rect x="20" y="2" width="7" height="7" fill="#5a141e" />
+      <rect x="21" y="3" width="5" height="5" fill="white" />
+      <rect x="22" y="4" width="3" height="3" fill="#5a141e" />
+
+      <rect x="2" y="20" width="7" height="7" fill="#5a141e" />
+      <rect x="3" y="21" width="5" height="5" fill="white" />
+      <rect x="4" y="22" width="3" height="3" fill="#5a141e" />
+
+      {/* Simulated matrix pixels */}
+      <rect x="10" y="3" width="2" height="1" fill="#5a141e" />
+      <rect x="13" y="2" width="1" height="3" fill="#5a141e" />
+      <rect x="15" y="4" width="2" height="1" fill="#5a141e" />
+      <rect x="11" y="6" width="3" height="2" fill="#5a141e" />
+
+      <rect x="2" y="11" width="2" height="2" fill="#5a141e" />
+      <rect x="5" y="10" width="2" height="3" fill="#5a141e" />
+      <rect x="2" y="15" width="3" height="1" fill="#5a141e" />
+      <rect x="6" y="16" width="2" height="2" fill="#5a141e" />
+
+      <rect x="20" y="10" width="3" height="1" fill="#5a141e" />
+      <rect x="24" y="11" width="2" height="2" fill="#5a141e" />
+      <rect x="21" y="14" width="1" height="3" fill="#5a141e" />
+      <rect x="25" y="15" width="2" height="3" fill="#5a141e" />
+
+      <rect x="10" y="20" width="2" height="3" fill="#5a141e" />
+      <rect x="14" y="22" width="3" height="1" fill="#5a141e" />
+      <rect x="11" y="25" width="4" height="2" fill="#5a141e" />
+
+      <rect x="20" y="20" width="2" height="2" fill="#5a141e" />
+      <rect x="23" y="22" width="3" height="2" fill="#5a141e" />
+      <rect x="20" y="25" width="4" height="1" fill="#5a141e" />
+      <rect x="25" y="24" width="2" height="3" fill="#5a141e" />
+
+      {/* Center box */}
+      <rect x="10" y="10" width="9" height="9" fill="white" />
+      <rect x="11" y="11" width="7" height="7" stroke="#5a141e" strokeWidth="1" />
+      <rect x="13" y="13" width="3" height="3" fill="#5a141e" />
+    </svg>
+  );
+}
 
 function Countdown({ target }: { target: string }) {
   const targetTime = useMemo(() => new Date(target).getTime(), [target]);
@@ -400,20 +552,20 @@ function Countdown({ target }: { target: string }) {
   ];
   return (
     <div className="w-full animate-float-up delay-1000">
-      <p className="mb-4 text-[10px] uppercase tracking-[0.22em] text-gold-dark sm:mb-5 sm:text-xs sm:tracking-[0.4em]">Counting down to the big day</p>
+      <p className="mb-3 text-[10px] uppercase tracking-[0.22em] text-gold-dark font-semibold sm:text-xs sm:tracking-[0.4em]">Counting down to the big day</p>
       <div className="grid w-full grid-cols-4 items-stretch justify-center gap-1.5 sm:gap-4">
         {items.map((it) => (
           <div
             key={it.label}
-            className="flex min-w-0 flex-col items-center rounded-md border border-gold-dark/40 bg-cream/50 px-1.5 py-2 shadow-sm backdrop-blur-sm sm:px-3 sm:py-3"
+            className="flex min-w-0 flex-col items-center rounded-md border border-gold-dark/40 bg-cream/60 px-1.5 py-2 shadow-xs backdrop-blur-sm sm:px-3 sm:py-3"
           >
             <span
-              className="text-maroon-deep leading-none"
+              className="text-maroon-deep font-bold leading-none"
               style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.45rem, 8vw, 2.7rem)" }}
             >
               {String(it.value).padStart(2, "0")}
             </span>
-            <span className="mt-1 text-[8px] tracking-[0.08em] text-gold-dark sm:text-[10px] sm:tracking-[0.2em]">{it.label}</span>
+            <span className="mt-1 text-[8px] tracking-[0.08em] text-gold-dark font-medium sm:text-[10px] sm:tracking-[0.2em]">{it.label}</span>
           </div>
         ))}
       </div>
