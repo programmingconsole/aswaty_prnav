@@ -387,7 +387,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
                   <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                SCAN FOR LOCATION
+                CLICK FOR LOCATION
               </a>
             </div>
           </div>
