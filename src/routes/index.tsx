@@ -345,7 +345,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
       {/* Flower border divider */}
       <FlowerDivider />
 
-      {/* Second page — Venue, Location QR, Artwork, Countdown & With Love */}
+      {/* Second page — Venue, Location QR, Artwork & Countdown */}
       <section className="relative flex flex-col items-center justify-center text-center w-full min-h-[85vh] py-4">
         <div className="relative w-full rounded-lg border border-gold-dark/60 bg-cream/50 px-3 py-6 max-[360px]:px-2 max-[360px]:py-5 shadow-sm backdrop-blur-sm sm:px-6 sm:py-8 flex flex-col justify-between gap-6">
           <CornerFlourish className="pointer-events-none absolute -left-1 -top-1 h-10 w-10 text-gold-dark sm:-left-2 sm:-top-2 sm:h-14 sm:w-14" />
@@ -406,16 +406,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
             <Countdown target="2026-11-15T10:00:00" />
           </div>
 
-          {/* With Love Footer */}
-          <div className="flex flex-col items-end text-right border-t border-gold-dark/30 pt-3">
-            <div className="font-display italic text-lg text-gold-dark font-semibold" style={{ fontFamily: "'Great Vibes', cursive" }}>
-              With love
-            </div>
-            <p className="mt-0.5 text-xs text-maroon-deep font-semibold leading-relaxed">
-              Pradeep, Shyja,<br />
-              Chippy, Anand
-            </p>
-          </div>
+
         </div>
       </section>
     </div>
