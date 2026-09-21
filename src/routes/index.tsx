@@ -147,30 +147,7 @@ function CornerFlourish({ className = "" }: { className?: string }) {
 function FlowerDivider() {
   return (
     <div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-xl flex-col items-center justify-center px-4 py-2 sm:py-4">
-      {/* Animated Ocean Wave Transition */}
-      <div className="relative w-full h-8 overflow-hidden my-1 opacity-70">
-        <svg
-          className="absolute bottom-0 left-0 w-[200%] h-7 animate-wave-1 opacity-40 text-[#2b6cb0]"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,20 C150,80 350,-20 500,40 C650,90 900,10 1200,45 L1200,120 L0,120 Z"
-            fill="currentColor"
-          />
-        </svg>
 
-        <svg
-          className="absolute bottom-0 left-0 w-[200%] h-6 animate-wave-2 opacity-60 text-[#b08850]"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,40 C200,70 450,10 700,50 C900,90 1050,15 1200,35 L1200,120 L0,120 Z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
 
       <div className="flex w-full items-center justify-center">
         <span className="h-px min-w-0 flex-1 bg-gradient-to-r from-transparent to-gold-dark/50" />
@@ -415,50 +392,13 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
             </div>
           </div>
 
-          {/* Beach Couple Illustration Image with Animated Sea Waves Overlay */}
+          {/* Beach Couple Illustration Image */}
           <div className="relative w-full overflow-hidden rounded-lg border border-gold-dark/40 shadow-xs my-2 group">
             <img
               src="/beach_wedding_bg.png"
               alt="Aswathi & Pranav Wedding Illustration"
               className="w-full h-auto object-cover max-h-[270px] transition-transform duration-700 hover:scale-105"
             />
-            
-            {/* Live Animated Sea Waves overlaying the shoreline */}
-            <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none overflow-hidden opacity-90">
-              <svg
-                className="absolute bottom-0 left-0 w-[200%] h-12 animate-wave-1 opacity-40 text-[#2b6cb0]"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,40 C150,90 350,-10 500,45 C650,100 900,20 1200,50 L1200,120 L0,120 Z"
-                  fill="currentColor"
-                />
-              </svg>
-
-              <svg
-                className="absolute bottom-0 left-0 w-[200%] h-10 animate-wave-2 opacity-55 text-[#319795]"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,20 C200,70 450,5 700,55 C900,95 1050,15 1200,35 L1200,120 L0,120 Z"
-                  fill="currentColor"
-                />
-              </svg>
-
-              {/* White Sparkling Sea Foam Wave */}
-              <svg
-                className="absolute bottom-0 left-0 w-[200%] h-7 animate-wave-3 opacity-80 text-white/90"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,60 C180,30 380,85 600,40 C820,95 1020,45 1200,65 L1200,120 L0,120 Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
           </div>
 
           {/* Countdown Timer */}
