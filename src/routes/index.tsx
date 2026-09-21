@@ -216,9 +216,6 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
         >
           Aswathi &amp; Pranav
         </h1>
-        <p className="mt-2 text-[10px] tracking-[0.18em] uppercase text-gold-dark font-medium sm:text-xs">
-          S/O MR. PRADEEP KUMAR &amp; MRS. SHIJA
-        </p>
       </div>
 
       <Ornament className="my-6 animate-float-up delay-1000 sm:my-8" />
