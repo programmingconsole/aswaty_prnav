@@ -397,7 +397,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
             <img
               src="/beach_wedding_bg.png"
               alt="Aswathi & Pranav Wedding Illustration"
-              className="w-full h-auto object-cover max-h-[270px] transition-transform duration-700 hover:scale-105"
+              className="w-full h-auto object-cover object-top max-h-[360px] transition-transform duration-700 hover:scale-105"
             />
           </div>
 
