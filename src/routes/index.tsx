@@ -220,7 +220,7 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
 
       <Ornament className="my-6 animate-float-up delay-1000 sm:my-8" />
 
-      <p className="tracking-[0.28em] text-sm text-maroon-deep/90 font-semibold animate-float-up delay-1000 sm:tracking-[0.4em]">
+      <p className="tracking-[0.25em] text-2xl font-bold text-maroon-deep/90 animate-float-up delay-1000 sm:tracking-[0.35em] sm:text-3xl">
         15 &middot; 11 &middot; 2026
       </p>
 
