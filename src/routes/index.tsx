@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Aswathi & Pranav — Wedding Invitation" },
-      { name: "description", content: "MR. PRADEEP KUMAR & MRS. SHYJA PRADEEP cordially invite you to celebrate the wedding of Aswathi & Pranav on 15th November 2026 at Adathara Auditorium, Wayanad." },
+      { name: "description", content: "MR. CHANDRAN & MRS. REKHA cordially invite you to celebrate the wedding of Aswathi & Pranav on 15th November 2026 at Adathara Auditorium, Wayanad." },
       { property: "og:title", content: "Aswathi & Pranav — Wedding Invitation" },
       { property: "og:description", content: "Join us in celebrating the wedding of Aswathi & Pranav on 15th November 2026 at Adathara Auditorium, Wayanad." },
       { property: "og:type", content: "website" },
@@ -201,10 +201,10 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
       <CornerFlourish className="pointer-events-none absolute bottom-1 right-1 h-12 w-12 scale-x-[-1] scale-y-[-1] text-gold-dark sm:bottom-2 sm:right-2 sm:h-20 sm:w-20 md:h-24 md:w-24" />
 
       <p className="tracking-[0.2em] text-[10px] font-semibold text-maroon-deep uppercase animate-float-up sm:tracking-[0.35em] sm:text-xs">
-        MR. PRADEEP KUMAR &amp; MRS. SHYJA PRADEEP
+        MR. CHANDRAN &amp; MRS. REKHA
       </p>
       <p className="mt-3 tracking-[0.22em] text-xs text-maroon-deep animate-float-up delay-200 sm:tracking-[0.4em] sm:text-sm">
-        THE WEDDING OF
+        CORDIALLY INVITE YOU TO CELEBRATE THE WEDDING OF
       </p>
 
       <Ornament className="my-6 animate-float-up delay-300 sm:my-8" />
@@ -217,7 +217,7 @@ function Cover({ onOpen, showButton = true }: { onOpen: () => void; showButton?:
           Aswathi &amp; Pranav
         </h1>
         <p className="mt-2 text-[10px] tracking-[0.18em] uppercase text-gold-dark font-medium sm:text-xs">
-          D/O MR. CHANDRAN &amp; MRS. REKHA
+          S/O MR. PRADEEP KUMAR &amp; MRS. SHIJA
         </p>
       </div>
 
@@ -267,11 +267,11 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
 
           <div>
             <p className="tracking-[0.16em] text-[10px] uppercase font-bold text-maroon-deep animate-float-up sm:text-[11px] max-w-[90%] mx-auto leading-relaxed">
-              MR. PRADEEP KUMAR &amp; MRS. SHYJA PRADEEP
+              MR. CHANDRAN &amp; MRS. REKHA
             </p>
 
             <p className="mt-2 italic text-maroon-deep/90 font-display text-[15px] animate-float-up delay-300 sm:text-base leading-snug">
-              Cordially invite you to celebrate<br />the wedding of our beloved son
+              Cordially invite you to celebrate<br />the wedding of our beloved daughter
             </p>
 
             {/* Couple */}
@@ -292,7 +292,7 @@ function CardContent({ playing: _playing, onToggle: _onToggle }: { playing: bool
             </div>
 
             <p className="mt-3 text-[10px] tracking-[0.18em] uppercase text-gold-dark font-semibold animate-float-up delay-700 sm:text-xs">
-              D/O MR. CHANDRAN &amp; MRS. REKHA
+              S/O MR. PRADEEP KUMAR &amp; MRS. SHIJA
             </p>
 
             <div className="my-3 mx-auto flex w-full max-w-[160px] items-center justify-center gap-2 animate-float-up delay-950">
